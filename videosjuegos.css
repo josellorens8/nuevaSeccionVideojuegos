@@ -1,0 +1,492 @@
+:root {
+    --color-principal:#4f1455;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: bahnschrift;
+}
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+/* background animation */
+
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-120deg, #e71d73 50%, #572483 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1000;
+
+}
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+.bg3 {
+    animation-duration:5s;
+}
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+    100% {
+    transform:translateX(25%);
+    }
+}
+
+
+/* logo */
+
+#logo_header{
+    width: 100px;
+    height: 100px;
+}
+
+/* logo animation */
+
+#logo_header{
+    animation: glitch 1s linear infinite;
+    
+}
+
+@keyframes glitch{
+    2%, 64%{
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60%{
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62%{
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+#logo_header:before,
+#logo_header:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+#logo_header:after{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+    -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+    2%,64%{
+        transform: translate(2px, -2px);
+    }
+    4%,60%{
+        transform: translate(-2px,2px);
+} 
+    62%{
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+#logo_header:after{
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-animation-path:  polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom{
+    2%,64%{
+        transform: translate(-2px, 0);
+}
+    4%,60%{
+        transform: translate(-2px, 0);
+    }
+    62%{
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+
+
+/* header */
+
+header #header_container {
+    align-items: center;
+    margin: auto;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    height: 160px;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    background-color: #ffffff;
+    display: grid;
+  }
+
+header #header_container .img_container {
+    display: flex;
+    justify-self: center;
+}
+
+header #header_container .img_container img {
+    width: 140px;
+    height: 140px;
+    animation: glitch 1s linear infinite;
+}
+
+header #header_container .img_container img:before, header #header_container .img_container img:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+header #header_container .img_container img:before {
+    animation: glitchTop 1s linear infinite;
+    -webkit-clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+            clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+    -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+header #header_container .img_container img:after {
+    animation: glitchBottom 1.5s linear infinite;
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-animation-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+header #header_container_burguer {
+    display: none;
+  }
+
+/*Seccion Juegos*/
+.juegos-container{
+    width: 100%;
+    margin: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.juego {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.portada-juego{
+    width: 25%;
+    height: 350px;
+    max-width: 240px;
+}
+
+.portada-juego img {
+    width: 100%;
+    
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.info-juego {
+    width: 75%;
+    height: 350px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion-juego{
+    width: 60%;
+    height: 350px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 20px;
+}
+
+.studio-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacto img{
+    width: 40px;
+}
+
+#keter-logo {
+    width: 100px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.galeria {
+    width: 40%;
+    height: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+.slider-container{
+    width: 100%;
+    max-width: 300px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.slide-track{
+    display: flex;
+    animation: sliders 30s linear infinite;
+    -webkit-animation: sliders 30s linear infinite;
+    width: calc(300px * 3);
+    height: 100%;
+}
+
+.slide{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slide img{
+    height: 100%;
+}
+
+@keyframes sliders {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50%{
+        -webkit-transform: translateX(calc(-300px * 2));
+        transform: translateX(calc(-300px * 2));
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.alfa-blood{
+    background-color: #a70000;
+}
+
+#feg-logo {
+    width: 150px;
+    background-color: #ffffff;
+}
+
+
+/* footer */
+
+footer{
+  background:#f9f9f9 ;
+  margin-top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
+  
+  
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container p{
+  padding: 0px 0px 0px 0px;
+}
+
+.cl{
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.logs{
+  height: 15px;
+  width: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  object-fit: contain;
+}
+
+.footer-container li{
+  margin: 5px;
+  display:  inline-flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.footer-container ul{
+  padding: 0;
+  text-align: center;
+}
+
+.logs{
+  height: 50px;
+  width: 90px;
+  border-radius: 15%;
+}
+.logs:hover{
+  transform: translateZ(50%);
+  filter: drop-shadow(0px 0px 20px #572483);
+  transition: 0.5s;
+}
+.footer-container p{
+  margin: 5px 0px;
+}
+
+.volver{
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(0%, 240%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.volver img {
+  width: 50px;
+}
+
+.volver:hover{
+  filter: drop-shadow(0px 0px 5px black);
+  opacity: 0.5;
+}
+
+/* medias query desde aca */
+
+
+@media screen and (max-width: 1000px){
+    
+    header #header_container {
+        display: none;
+      }
+
+      header #header_container_burguer {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+    }
+      header #header_container_burguer .img_container {
+        display: flex;
+        justify-self: center;
+      }
+      header #header_container_burguer .img_container img {
+        width: 95px;
+        height: 95px;
+        animation: glitch 1s linear infinite;
+      }
+      header #header_container_burguer .img_container img:before, header #header_container_burguer .img_container img:after {
+        content: attr(title);
+        position: absolute;
+        left: 0;
+      }
+      header #header_container_burguer .img_container img:before {
+        animation: glitchTop 1s linear infinite;
+        -webkit-clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+                clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+        -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      }
+      header #header_container_burguer .img_container img:after {
+        animation: glitchBottom 1.5s linear infinite;
+        -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+                clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        -webkit-animation-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+      }
+
+    footer {
+      border-radius: 15px 15px 0px 0px;
+  }
+  
+  .logs{
+      width: 50px;
+      height: 30px;
+  }
+
+  .volver{
+    width: 30px;
+    height: 30px;
+    transform: translate(0%, 350%);
+  }
+  .volver img {
+    width: 18px;
+  }
+
+  .juegos-container{
+    margin: 100px 0px;
+  }
+
+  .juego{
+    flex-direction: column;
+  }
+  
+  .portada-juego{
+    width: 100%;
+    max-width: 80%;
+    height: 100%;
+  }
+
+  .portada-juego img{
+    height: 500px;
+  }
+
+  .info-juego{
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+  }
+
+  .descripcion-juego{
+    width: 90%;
+    height: auto;
+  }
+
+  .contacto img {
+    width: 25px;
+  }
+
+  #keter-logo{
+    width: 80px;
+    padding: 5px;
+    border-radius: 5;
+  }
+
+  .galeria{
+    width: 80%;
+    justify-content: center;
+  }
+}
