@@ -207,12 +207,23 @@ header #header_container_burguer {
 
 .descripcion-juego{
     width: 60%;
-    height: 350px;
+    min-height: 350px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 0px 20px;
+}
+
+.descripcion-juego h1{
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 0;
+}
+
+.descripcion-juego p{
+  font-size: 1.2em;
+  margin: 0;
 }
 
 .studio-info{
@@ -221,8 +232,12 @@ header #header_container_burguer {
     justify-content: space-between;
 }
 
-.contacto img{
-    width: 40px;
+
+.fa-brands,
+.fa-solid {
+  font-size: 3em;
+  color: #ffff;
+  margin: 5px;
 }
 
 #keter-logo {
@@ -263,6 +278,7 @@ header #header_container_burguer {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin: 0 5px;
 }
 
 .slide img{
@@ -285,14 +301,25 @@ header #header_container_burguer {
 }
 
 .alfa-blood{
-    background-color: #a70000;
+    background-color: #2d2d2d;
 }
 
-#feg-logo {
-    width: 150px;
-    background-color: #ffffff;
+.proPla{
+  background-color: #132227;
 }
 
+.shadow{
+  background-color: black;
+}
+#feg-logo,
+#ana-logo{
+    width: 140px;
+}
+
+
+#zero1-logo{
+  width: 120px;
+}
 
 /* footer */
 
@@ -475,18 +502,44 @@ footer{
     height: auto;
   }
 
-  .contacto img {
-    width: 25px;
+  .descripcion-juego h1{
+    text-align: center;
+    margin: 10px;
+
   }
+
 
   #keter-logo{
     width: 80px;
     padding: 5px;
-    border-radius: 5;
+    border-radius: 5px;
   }
 
-  .galeria{
-    width: 80%;
-    justify-content: center;
-  }
+  .galeria {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+.slider-container{
+    width: 100%;
+    max-width: 240px;
+    height: 240px;
+}
+
+.slide-track{
+    width: calc(240px * 3);
+}
+
+.slide{
+    width: 240px;
+}
+
+.slide img{
+    height: 100%;
+}
+
+ 
 }
