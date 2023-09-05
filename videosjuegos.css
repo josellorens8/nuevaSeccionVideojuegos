@@ -215,6 +215,10 @@ header #header_container_burguer {
     padding: 0px 20px;
 }
 
+.claro{
+  color: black !important;
+}
+
 .descripcion-juego h1{
   text-transform: uppercase;
   font-size: 2em;
@@ -222,7 +226,7 @@ header #header_container_burguer {
 }
 
 .descripcion-juego p{
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -245,6 +249,10 @@ header #header_container_burguer {
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
+}
+
+#five-logo{
+  width: 100px;
 }
 
 .galeria {
@@ -311,16 +319,73 @@ header #header_container_burguer {
 .shadow{
   background-color: black;
 }
+
+.andy{
+  background-color: red;
+}
+
+.nutricion{
+  background-color: #07b0e9;
+}
+
+.colorTouch{
+  background-color: #5dbffc;
+}
+
+.delivery{
+  background-color: #a36c34;
+}
+
+.another{
+  background-color: #c70e0e;
+}
+
+.escape{
+  background-color: #23a919;
+}
+
+.duck{
+  background-color: #5b5487;
+}
+
+.just{
+  background-color: #292929;
+}
+
+.blank{
+  background-color: #fff;
+}
+
+.lily{
+  background-color: #233967;
+}
+
+.marin{
+  background-color: #462559;
+}
+
+.raices{
+  background-color: #10253f;
+}
 #feg-logo,
-#ana-logo{
+#ana-logo {
     width: 140px;
 }
 
 
-#zero1-logo{
+#zero1-logo,
+#yaam-logo {
   width: 120px;
 }
 
+
+#lowFire-logo{
+  width: 100px;
+}
+
+#pangolin-logo{
+  width: 80px;
+}
 /* footer */
 
 footer{
