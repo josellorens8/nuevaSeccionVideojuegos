@@ -238,7 +238,8 @@ header #header_container_burguer {
 
 
 .fa-brands,
-.fa-solid {
+.fa-solid,
+.fa-regular {
   font-size: 3em;
   color: #ffff;
   margin: 5px;
@@ -366,6 +367,10 @@ header #header_container_burguer {
 
 .raices{
   background-color: #10253f;
+}
+
+.dodge{
+  background-color: #da832c;
 }
 #feg-logo,
 #ana-logo {
@@ -610,8 +615,24 @@ footer{
     height: 100%;
 }
 .fa-brands,
-.fa-solid {
+.fa-solid,
+.fa-regular {
   font-size: 2em;
+}
+
+@keyframes sliders {
+  0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+  }
+  50%{
+      -webkit-transform: translateX(calc(-300px * 2));
+      transform: translateX(calc(-240px * 2));
+  }
+  100%{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+  }
 }
  
 }
