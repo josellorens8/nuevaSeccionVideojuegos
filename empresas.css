@@ -1,0 +1,370 @@
+
+:root {
+    /*Colors*/
+    --blanco: #fff;
+    --oscuro: #1d1d1b;
+    --morado: #572483;
+    --fucsia: #e71d73;
+
+    --blanco-50: rgba(255, 255, 255, 0.5);
+    --oscuro-50: rgba(29, 29, 27, 0.5);
+    --morado-50: rgba(87, 36, 131, 0.5);
+    --fucsia-50: rgba(231, 29, 117, 0.5);
+
+    /*Typography*/
+    --base-font: 'Bahnschrift', sans-serif;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: var(--base-font);
+    font-size: 62.5%;
+    color: var(--blanco);
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  header, footer {
+    font-family: var(--base-font);
+    color: var(--oscuro);
+    font-size: 1.4em;
+  }
+  
+  ul, ol {
+    list-style-type: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-120deg, #e71d73 50%, #572483 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1000;
+
+}
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+.bg3 {
+    animation-duration:5s;
+}
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+    100% {
+    transform:translateX(25%);
+    }
+}
+
+/* logo animation */
+
+#logo_header{
+    animation: glitch 1s linear infinite;
+    
+}
+
+@keyframes glitch{
+    2%, 64%{
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60%{
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62%{
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+#logo_header:before,
+#logo_header:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+#logo_header:after{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+    -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+    2%,64%{
+        transform: translate(2px, -2px);
+    }
+    4%,60%{
+        transform: translate(-2px,2px);
+} 
+    62%{
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+#logo_header:after{
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-animation-path:  polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom{
+    2%,64%{
+        transform: translate(-2px, 0);
+}
+    4%,60%{
+        transform: translate(-2px, 0);
+    }
+    62%{
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+
+
+/* header */
+
+header #header_container {
+    align-items: center;
+    margin: auto;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    background-color: #ffffff;
+    display: grid;
+  }
+
+header #header_container .img_container {
+    display: flex;
+    justify-self: center;
+}
+
+header #header_container .img_container img {
+    animation: glitch 1s linear infinite;
+    width: 100px;
+}
+
+header #header_container .img_container img:before, header #header_container .img_container img:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+header #header_container .img_container img:before {
+    animation: glitchTop 1s linear infinite;
+    -webkit-clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+            clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+    -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+header #header_container .img_container img:after {
+    animation: glitchBottom 1.5s linear infinite;
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-animation-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+header #header_container_burguer {
+    display: none;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0px;
+  }
+  
+  .empresas {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .empresas__empresa {
+    background-color: var(--morado-50);
+    border-radius: 50px 10px;
+    padding: 40px;
+    display: inherit;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .empresas__imagen {
+    width: 20%;
+    min-width: 200px;
+  }
+
+  .empresas__imagen img {
+    border-radius: 5px 20px;
+  }
+
+  .keter {
+    background-color: var(--blanco);
+    padding: 10px;
+    border-radius: 5px 20px;
+  }
+
+  .empresas__title {
+    font-size: 2.4em;
+    text-transform: uppercase;
+  }
+  .empresas__text {
+    font-size: 1.8em;
+  }
+  .empresas__info {
+    display: inherit;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .empresas__contacto {
+    display: inherit;
+    justify-content: start;
+    gap: 15px;
+  }
+
+  .empresas__links {
+    font-size: 3em;
+    transition: all 0.3s;
+  }
+
+  .empresas__links:hover{
+    color: var(--fucsia);
+    filter: drop-shadow(0px 0px 8px var(--oscuro));
+    scale: 1.4;
+  }
+  /* footer */
+
+footer{
+    background:#f9f9f9 ;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+    
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-container p{
+    padding: 0px 0px 0px 0px;
+  }
+  
+  .cl{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .logs{
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    object-fit: contain;
+  }
+  
+  .footer-container li{
+    margin: 5px;
+    display:  inline-flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+  }
+  
+  .footer-container ul{
+    padding: 0;
+    text-align: center;
+  }
+  
+  .logs{
+    height: 50px;
+    width: 90px;
+    border-radius: 15%;
+  }
+  .logs:hover{
+    transform: translateZ(50%);
+    filter: drop-shadow(0px 0px 20px #572483);
+    transition: 0.5s;
+  }
+  .footer-container p{
+    margin: 5px 0px;
+  }
+
+  @media screen and (max-width: 1000px){
+
+    .empresas__empresa {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .empresas__imagen {
+        width: 70%;
+    }
+
+    .empresas__info {
+        text-align: center;
+        gap: 20px;
+    }
+
+    .empresas__title {
+        font-size: 3em;
+    }
+
+    .empresas__text {
+        font-size: 2.2em;
+        text-align: left;
+    }
+
+    .empresas__info {
+        align-items: center;
+    }
+
+    footer {
+      border-radius: 15px 15px 0px 0px;
+  }
+  
+  .logs{
+      width: 50px;
+      height: 30px;
+  }
+ 
+}
