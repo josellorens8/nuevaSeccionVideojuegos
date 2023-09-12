@@ -201,7 +201,7 @@ header #header_container_burguer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 150px 0px;
+    margin: 200px 0 100px;
   }
   
   .empresas {
@@ -263,6 +263,28 @@ header #header_container_burguer {
     filter: drop-shadow(0px 0px 8px var(--oscuro));
     scale: 1.4;
   }
+
+
+  .volver{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(0%, 240%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .volver img {
+    width: 50px;
+  }
+  
+  .volver:hover{
+    filter: drop-shadow(0px 0px 5px black);
+    opacity: 0.5;
+  }
+
   /* footer */
 
 footer{
@@ -365,6 +387,15 @@ footer{
   .logs{
       width: 50px;
       height: 30px;
+  }
+
+  .volver{
+    width: 40px;
+    height: 40px;
+    transform: translate(0%, 450%);
+  }
+  .volver img {
+    width: 30px;
   }
  
 }
